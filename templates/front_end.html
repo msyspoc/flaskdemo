@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Login form</title>
+<style>
+body
+{
+	background-image: url('/static/imageedit_1_6501857526.jpg');
+	height: 100vh;
+	background-size: cover;
+	background-position: center;	
+}
+.container
+{
+	color: green;
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto; 
+}
+.container input
+{
+	font-family: "Roboto", sans-serif;
+	outline: 1;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 15px 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+</style>
+<script>
+	function func()
+	{
+		window.location.href = "/check/"
+	}
+	function func10()
+	{
+		window.location.href = "/create/"
+	}
+</script>
+</head>
+<body>
+  <div class= "container">
+  <h2>If u already registered then Login</h2>	
+  <form  action = "/check/" method="POST">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button id="clickme" type="submit" onclick="func()">Login</button>
+
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+      <div class="form" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw" >Forgot <a href="/create/">password?</a></span>
+  	  </div>
+  </form>
+  <h1>FOR SIGN UP FILL THIS FORM</h1>
+  <form action = "/create/" method="POST" >
+  		<label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button id="clickme" type="submit" onclick="func10()">SignUp</button>   
+  </form>
+  </div>
+</body>
+</html>

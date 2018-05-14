@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Display Page</title>
+<style>
+b
+{
+color:blue;	
+}
+h1
+{
+font-style: italic;
+color: purple;
+text-align: center;
+background-color: green;
+border-style: solid;
+border-color: black;
+border-width: medium;
+padding: 100px 100px 100px 100px;
+height: 100px;
+width: 70%;
+}
+body
+{
+background-color: pink;
+margin: auto;
+width: 60%;
+padding: 200px;
+}
+</style>
+</head>
+<body>
+<h1> WELCOME TO MY WEBSITE</h1>
+<form action="/update_data/" method="POST" enctype="multipart/form-data">
+	<input type="file" name="uploadfile" id="myFile" accept="image/*" multiple>
+	<input type="submit" name="submit" value="submit">
+	<input type="submit" name="submit" value="Update">
+</form>	
+<form action="/images/" method="GET" enctype="multipart/form-data">
+	<input type="submit" value="Images">
+</form>	
+</form>	
+<form action="/deleteimage/" enctype="multipart/form-data">
+	<input type="submit" value="Delete">
+</form>
+<b><a href = '/logout/' >click here to logout</a></b>
+</body>
+</html>
