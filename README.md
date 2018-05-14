@@ -30,15 +30,15 @@ Copy the following contents in the file.
 Description=MongoDB Database
 After=network.target
 Documentation=https://docs.mongodb.org/manual
-# Service tells systemd, how the service should be started.
-# Key `User` specifies that the server will run under the mongodb user and
-# `ExecStart` defines the startup command for MongoDB server.
+#Service tells systemd, how the service should be started.
+#Key `User` specifies that the server will run under the mongodb user and
+#`ExecStart` defines the startup command for MongoDB server.
 [Service]
 User=mongodb
 Group=mongodb
 ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
-# Install tells systemd when the service should be automatically started.
-# `multi-user.target` means the server will be automatically started during boot.
+#Install tells systemd when the service should be automatically started.
+#`multi-user.target` means the server will be automatically started during boot.
 [Install]
 WantedBy=multi-user.target "
 
@@ -87,33 +87,33 @@ Step 4:We have successfully created our virtual environment, now let’s activat
 Step 5:It is time to install flask. We will use pip to install the package -
 pip install Flask
 
-1. Created the Database mydata in Mongodb.
+2. Created the Database mydata in Mongodb.
 
-2. Created the Collection userdata in mydata Database.
+3. Created the Collection userdata in mydata Database.
 
-3. Create the mongo.py file in flaskproject directory.
+4. Create the mongo.py file in flaskproject directory.
 
-4. Import Flask, jsonify, request, render_template, session, redirect, url_for, Response, make_response from flask module.
+5. Import Flask, jsonify, request, render_template, session, redirect, url_for, Response, make_response from flask module.
 
-5. Import PyMongo from flask_pymongo.
+6. Import PyMongo from flask_pymongo.
 #Command for installing flask_pymongo:-
 > sudo pip install Flask-PyMongo
 
-6. Import MongoClient from pymongo. 
+7. Import MongoClient from pymongo. 
 # Using MongoClient, we made the connection with Mongodb database.
 
-7. Import BSON, json_util, ObjectId from bson.
+8. Import BSON, json_util, ObjectId from bson.
 #Command for installing bson:-
 > sudo pip install bson
 
-8. Import Template from jinja2.
+9. Import Template from jinja2.
 #Command for installing jinja2:-
 > sudo pip install jinja2 
 
-9. Import join, dirname, realpath from os.path.
+10. Import join, dirname, realpath from os.path.
 
-10. Then, wrote some methods for our user login apllication.
+11. Then, wrote some methods for our user login apllication.
 
-11. For password encryption, import hashlib and salt.
+12. For password encryption, import hashlib and salt.
 
-12. Save session and cookies on our apllication for unique users.
+13. Save session and cookies on our apllication for unique users.
